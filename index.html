@@ -119,7 +119,7 @@
     }
 
     .section-padding {
-      padding: 80px 0;
+      padding: 110px 0;
     }
 
     .row-grid {
@@ -135,7 +135,13 @@
         gap: 40px;
       }
       .section-padding {
-        padding: 50px 0;
+        padding: 70px 0;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .section-padding {
+        padding: 56px 0;
       }
     }
 
@@ -164,6 +170,20 @@
       align-items: center;
       text-decoration: none;
     }
+
+    .logo-img-brand {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: var(--transition-base);
+    }
+
+    .logo-img-brand:hover {
+      transform: scale(1.02);
+    }
+
+
 
     .logo {
       font-family: var(--font-display);
@@ -228,20 +248,47 @@
 
     @media (max-width: 767px) {
       .nav-container {
-        height: auto;
-        padding: 15px 0;
-        flex-direction: column;
-        gap: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 0;
       }
       .header-contacts {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        text-align: center;
+        gap: 8px;
+        text-align: right;
       }
       .contact-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+      }
+      .contact-icon-wrapper {
+        width: 32px;
+        height: 32px;
+      }
+      .contact-icon-wrapper svg {
+        width: 14px;
+        height: 14px;
+      }
+      .contact-info {
+        display: flex;
         flex-direction: column;
-        gap: 5px;
+        align-items: flex-start;
+      }
+      .contact-sub {
+        display: none !important;
+      }
+      .contact-main {
+        font-size: 0.8rem;
+      }
+      .hide-on-mobile {
+        display: none !important;
       }
     }
 
@@ -249,7 +296,7 @@
        5. HERO SECTION
        ------------------------------------------------------------- */
     .hero-section {
-      padding: 30px 0 60px 0;
+      padding: 40px 0 80px 0;
     }
 
     .hero-banner {
@@ -385,26 +432,47 @@
     }
 
     @media (max-width: 767px) {
+      .logo-img-brand {
+        height: 44px !important;
+      }
+      .hero-section {
+        padding: 16px 0 32px 0;
+      }
       .hero-banner {
-        height: 400px;
+        height: 280px;
       }
       .hero-overlay {
-        padding: 30px;
+        background: rgba(0, 0, 0, 0.45);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-brand {
+        align-self: center;
+        text-align: center;
       }
       .hero-title {
-        font-size: 2.8rem;
+        font-size: 2.1rem;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        text-align: center;
       }
-      .hero-card {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 20px;
-        max-width: 100%;
-        display: inline-block;
-        padding: 20px;
+      .side-image-wrapper {
+        height: 240px;
       }
-      .hero-card-price {
-        font-size: 2.5rem;
+      .row-title {
+        font-size: 1.8rem;
+      }
+      .bullet-block {
+        padding: 16px;
+        gap: 12px;
+      }
+      .bullet-title {
+        white-space: normal !important;
+        font-size: 0.85rem;
       }
     }
 
@@ -1004,9 +1072,36 @@
     }
 
     @media (max-width: 767px) {
+      .faq-section .heading-accent {
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        justify-content: flex-start;
+        gap: 6px;
+      }
       .faq-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 14px;
+        margin-top: 24px;
+      }
+      .faq-question {
+        padding: 16px;
+        gap: 10px;
+      }
+      .faq-question-left {
+        gap: 10px;
+      }
+      .faq-q-box {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+      }
+      .faq-q-text {
+        font-size: 0.82rem;
+        line-height: 1.4;
+      }
+      .faq-answer-content {
+        padding: 0 16px 16px 54px;
+        font-size: 0.82rem;
       }
     }
 
@@ -1090,7 +1185,7 @@
     .footer {
       background: var(--dark-charcoal);
       color: var(--text-light);
-      padding: 80px 0 40px 0;
+      padding: 110px 0 50px 0;
       position: relative;
     }
 
@@ -1343,7 +1438,7 @@
     <div class="container">
       <div class="nav-container">
         <a href="#" class="logo-container">
-          <div class="logo"><span class="logo-exco">GULF</span><span class="logo-rent">TECHBAY</span></div>
+          <img src="logo/gulftechbar_black.png" alt="Gulf Techbay Logo" class="logo-img-brand">
         </a>
         <div class="header-contacts">
           <div class="contact-block">
@@ -1361,7 +1456,7 @@
               </div>
             </div>
           </div>
-          <div class="contact-block">
+          <div class="contact-block hide-on-mobile">
             <div class="contact-icon-wrapper">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -1661,7 +1756,7 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Upon reservation, you will receive text alerts and telemetry links to monitor mobilization schedules, on-site machine arrivals, and billing cycles instantly via web panels.
+              Upon reservation, you will receive text alerts to keep you informed on mobilization schedules, on-site machine arrivals, and billing cycles — so you always know exactly where your equipment is and when it's coming.
             </div>
           </div>
         </div>
@@ -1714,10 +1809,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo"><span class="logo-exco" style="color:#fff;">GULF</span><span class="logo-rent">TECHBAY</span></div>
-          <p class="footer-brand-text">
-            Lease your Construction Equipment with confidence. We provide what you need, when you need it, all the time. Our 24/7 hotline provides wide-ranging solutions for all Construction Equipment situations you might encounter.
-          </p>
+          <a href="#" class="logo-container" style="margin-bottom: 24px;">
+            <img src="logo/gulftechbay_white.png" alt="Gulf Techbay Logo" class="logo-img-brand">
+          </a>
           <p class="footer-brand-text" style="margin-bottom: 8px;">
             <strong style="color:rgba(255,255,255,0.6); font-size:0.8rem; letter-spacing:0.05em;">EMAIL US</strong><br>
             <a href="mailto:gtechbay@gmail.com" style="color: var(--primary-orange); text-decoration: none; font-size: 1rem;">gtechbay@gmail.com</a>
@@ -1737,9 +1831,7 @@
             <li>
               <span class="muted">SATURDAY:</span> 9am - 4pm
             </li>
-            <li>
-              <span class="muted">SUNDAY:</span> closed
-            </li>
+
             <li style="margin-top: 20px; font-family: var(--font-display); font-weight: 500;">
               <div>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; color: var(--primary-orange)">
