@@ -3,16 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXCORent | Heavy Excavator & Loader Rentals</title>
+  <title>GULFTECHBAY | Heavy Excavator & Loader Rentals</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Lease premium construction equipment from top brands — CAT, Komatsu, Volvo, Hitachi, JCB and more. Flexible daily, weekly, and monthly rates for excavators, loaders, graders & more.">
   <meta name="theme-color" content="#FF6600">
   
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <!-- PP Mori Local Font -->
+  <style>
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-Extralight.otf') format('opentype');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-RegularItalic.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-SemiBold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
   
   <style>
     /* -------------------------------------------------------------
@@ -31,8 +58,8 @@
       --text-muted: #5F6970;
       --text-light: #FFFFFF;
       
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      --font-display: 'PP Mori', system-ui, sans-serif;
+      --font-body: 'PP Mori', system-ui, sans-serif;
       
       --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       --max-width: 1200px;
@@ -772,12 +799,12 @@
        ------------------------------------------------------------- */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
 
     .gallery-item {
-      height: 250px;
+      height: 320px;
       border-radius: 8px;
       overflow: hidden;
       position: relative;
@@ -826,9 +853,9 @@
       right: 16px;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 575px) {
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
     }
 
@@ -836,37 +863,60 @@
     .lightbox-modal {
       position: fixed;
       inset: 0;
-      background: rgba(26, 29, 32, 0.95);
+      background: rgba(0, 0, 0, 0.97);
       z-index: 2000;
       display: none;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(8px);
+      animation: fadeInLightbox 0.2s ease;
+    }
+
+    @keyframes fadeInLightbox {
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
 
     .lightbox-content {
-      max-width: 80%;
-      max-height: 80%;
+      width: 100vw;
+      height: 100vh;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
     .lightbox-content img {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      border-radius: 8px;
+      border-radius: 0;
+      user-select: none;
     }
 
     .lightbox-close {
-      position: absolute;
-      top: -50px;
-      right: 0;
-      background: transparent;
-      border: none;
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
       color: white;
       font-size: 2rem;
+      line-height: 1;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
       cursor: pointer;
-      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 2100;
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary-orange);
+      border-color: var(--primary-orange);
     }
 
     /* -------------------------------------------------------------
@@ -1304,7 +1354,11 @@
             </div>
             <div class="contact-info">
               <span class="contact-sub font-mono">CALL US TODAY</span>
-              <a href="tel:+12345646789" class="contact-main orange-link">+1 234 564 67 89</a>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <a href="tel:+2348085290298" class="contact-main orange-link">08085290298</a>
+                <span style="color:#ccc; font-weight:300;">|</span>
+                <a href="tel:+2347010310703" class="contact-main orange-link">07010310703</a>
+              </div>
             </div>
           </div>
           <div class="contact-block">
@@ -1316,7 +1370,7 @@
             </div>
             <div class="contact-info">
               <span class="contact-sub font-mono">OUR OFFICE LOCATION</span>
-              <span class="contact-main">112 Broadway Ave, New Brunswick, NJ 08901</span>
+              <span class="contact-main">KM16, Opp. OEC, PHC-Aba Rd, Eleme Jct, Port Harcourt</span>
             </div>
           </div>
         </div>
@@ -1331,14 +1385,6 @@
         <img src="assets/hero_excavator.png" alt="Heavy construction equipment — excavators, loaders, graders from CAT, Komatsu, Volvo, Hitachi, JCB" class="hero-img">
         <div class="hero-overlay">
           <div class="hero-brand">
-            <div class="brand-strip">
-              <span class="brand-pill highlight">CAT</span>
-              <span class="brand-pill">KOMATSU</span>
-              <span class="brand-pill">VOLVO CE</span>
-              <span class="brand-pill">HITACHI</span>
-              <span class="brand-pill">JCB</span>
-              <span class="brand-pill">LIEBHERR</span>
-            </div>
             <h1 class="hero-title">HEAVY EQUIPMENT<br>LEASING</h1>
           </div>
         </div>
@@ -1346,52 +1392,7 @@
     </div>
   </section>
 
-  <!-- BRANDS WE CARRY TICKER -->
-  <section class="brands-section">
-    <div class="brands-label">PREMIUM BRANDS IN OUR LEASING FLEET</div>
-    <div class="brands-ticker">
-      <div class="brands-track">
-        <span class="b-brand highlight-brand">Caterpillar</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Komatsu</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Volvo CE</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Hitachi</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">JCB</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Liebherr</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Doosan</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Sany</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Kobelco</span>
-        <span class="b-sep">&bull;</span>
-        
-        <!-- Duplicate for infinite loop scroll -->
-        <span class="b-brand highlight-brand">Caterpillar</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Komatsu</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Volvo CE</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Hitachi</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">JCB</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Liebherr</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Doosan</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Sany</span>
-        <span class="b-sep">&bull;</span>
-        <span class="b-brand">Kobelco</span>
-        <span class="b-sep">&bull;</span>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ABOUT SECTION -->
   <section class="about-section section-padding reveal">
@@ -1404,117 +1405,7 @@
   </section>
 
 
-  <!-- EQUIPMENT WE LEASE -->
-  <section class="equip-section section-padding reveal">
-    <div class="container">
-      <div style="text-align:center; margin-bottom: 48px;">
-        <h2 class="heading-accent" style="justify-content:center;">EQUIPMENT <span>WE LEASE</span></h2>
-        <p style="color: var(--text-muted); font-size: 1rem; max-width: 580px; margin: 0 auto;">From excavators to cranes — we source world-class machines from the industry's top manufacturers so you always get the right tool for the job.</p>
-      </div>
-      <div class="equip-grid">
 
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/hero_excavator.png" alt="CAT Excavator" class="equip-img">
-            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Crawler Excavator</h3>
-            <p class="equip-desc">Heavy-duty digging for foundations, trenching, and bulk earthmoving on demanding jobsites.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/komatsu_excavator.png" alt="Komatsu Excavator" class="equip-img">
-            <span class="equip-brand-badge" style="background:#005BAC;">Komatsu</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Hydraulic Excavator</h3>
-            <p class="equip-desc">Precision digging with advanced hydraulics — ideal for infrastructure and deep excavation work.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/two_loaders.png" alt="Wheel Loader" class="equip-img">
-            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Wheel Loader</h3>
-            <p class="equip-desc">High-capacity loading for quarries, aggregate handling, and material transfer applications.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/volvo_dump_truck.png" alt="Volvo Dump Truck" class="equip-img">
-            <span class="equip-brand-badge" style="background:#003B7C;">Volvo CE</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Articulated Dump Truck</h3>
-            <p class="equip-desc">Off-road hauling of heavy payloads across rough terrain — built for mining and large-scale earthwork.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/jcb_backhoe.png" alt="JCB Backhoe Loader" class="equip-img">
-            <span class="equip-brand-badge" style="background:#F5A800; color:#111;">JCB</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Backhoe Loader</h3>
-            <p class="equip-desc">Versatile two-in-one machine for digging, trenching, and loading — perfect for utility and civil works.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/hitachi_excavator.png" alt="Hitachi Excavator" class="equip-img">
-            <span class="equip-brand-badge" style="background:#CC0000;">Hitachi</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Mining Excavator</h3>
-            <p class="equip-desc">Built for extreme conditions — heavy rock breaking, quarry stripping, and large-scale extraction projects.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/motor_grader.png" alt="Motor Grader" class="equip-img">
-            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Motor Grader</h3>
-            <p class="equip-desc">Precision road grading and levelling for highway construction, airfields, and site preparation.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/liebherr_crane.png" alt="Liebherr Mobile Crane" class="equip-img">
-            <span class="equip-brand-badge" style="background:#F7CE00; color:#111;">Liebherr</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Mobile Crane</h3>
-            <p class="equip-desc">Telescopic all-terrain cranes for high-capacity lifting on construction, oil &amp; gas, and industrial sites.</p>
-          </div>
-        </div>
-
-        <div class="equip-card">
-          <div class="equip-img-wrap">
-            <img src="assets/wheel_loader_digging.png" alt="Wheel Loader Digging" class="equip-img">
-            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
-          </div>
-          <div class="equip-info">
-            <h3 class="equip-name">Compact Loader</h3>
-            <p class="equip-desc">Agile and powerful for tight urban sites, landscaping, and small-scale earthmoving operations.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- CONTENT ROW 1: WHY LEASING -->
   <section class="content-row-section section-padding reveal">
@@ -1542,7 +1433,7 @@
               </svg>
             </div>
             <div>
-              <h4 class="bullet-title">SPEND MONEY ON EQUIPMENT ONLY WHEN YOU USE IT</h4>
+              <h4 class="bullet-title" style="white-space: nowrap;">SPEND MONEY ON EQUIPMENT ONLY WHEN YOU USE IT</h4>
               <a href="#contact" class="bullet-link">GET A QUOTE</a>
             </div>
           </div>
@@ -1617,22 +1508,7 @@
     </a>
   </section>
 
-  <!-- ORANGE CONTACT STRIP -->
-  <section class="orange-strip">
-    <div class="container">
-      <div class="strip-flex">
-        <div class="strip-left">
-          <span>CONTACT US</span>
-          <a href="tel:+12345646789">+1 234 564 67 89</a>
-        </div>
-        <div class="strip-right">
-          Monday - Friday: 8am - 6pm<br>
-          Saturday: 9am - 4pm<br>
-          Sunday: closed
-        </div>
-      </div>
-    </div>
-  </section>
+
 
 
 
@@ -1640,8 +1516,9 @@
   <section class="gallery-section section-padding reveal">
     <div class="container">
       <div class="gallery-grid">
+        <!-- Top-left: Wheel loader on flatbed -->
         <div class="gallery-item" onclick="openLightbox(0)">
-          <img src="assets/komatsu_excavator.png" alt="Komatsu Hydraulic Excavator at work" class="gallery-img">
+          <img src="assets/two_loaders.png" alt="CAT Wheel Loader on transport flatbed" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1652,8 +1529,9 @@
             </svg>
           </div>
         </div>
+        <!-- Top-right: Wheel loader digging rock -->
         <div class="gallery-item" onclick="openLightbox(1)">
-          <img src="assets/volvo_dump_truck.png" alt="Volvo CE Articulated Dump Truck hauling rock" class="gallery-img">
+          <img src="assets/wheel_loader_digging.png" alt="CAT Wheel Loader pushing rock on site" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1664,8 +1542,9 @@
             </svg>
           </div>
         </div>
+        <!-- Bottom-left: Bucket teeth close-up -->
         <div class="gallery-item" onclick="openLightbox(2)">
-          <img src="assets/jcb_backhoe.png" alt="JCB Backhoe Loader front bucket" class="gallery-img">
+          <img src="assets/bucket_teeth.png" alt="Heavy equipment bucket teeth close-up" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1676,8 +1555,9 @@
             </svg>
           </div>
         </div>
+        <!-- Bottom-right: Dump truck + loader fleet -->
         <div class="gallery-item" onclick="openLightbox(3)">
-          <img src="assets/liebherr_crane.png" alt="Liebherr Mobile Crane setting structural steel" class="gallery-img">
+          <img src="assets/hitachi_excavator.png" alt="Heavy equipment fleet - dump truck and wheel loaders" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1711,7 +1591,7 @@
           <div class="faq-question" onclick="toggleFaq(this)">
             <div class="faq-question-left">
               <div class="faq-q-box">?</div>
-              <span class="faq-q-text">What updates can I expect with ExcoRent?</span>
+              <span class="faq-q-text">What updates can I expect with Gulf Techbay?</span>
             </div>
             <div class="faq-chevron">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1721,7 +1601,7 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              ExcoRent continuously updates its machinery fleet to feature the latest energy-efficient, robust models from CAT, Komatsu, Volvo, Hitachi, JCB, Liebherr, and other premier manufacturers. You receive top performance, fully inspected safety configurations on every dispatch.
+              Gulf Techbay continuously updates its machinery fleet to feature the latest energy-efficient, robust models from CAT, Komatsu, Volvo, Hitachi, JCB, Liebherr, and other premier manufacturers. You receive top performance, fully inspected safety configurations on every dispatch.
             </div>
           </div>
         </div>
@@ -1848,7 +1728,8 @@
         </div>
         <div>
           <span class="footer-action-title">RENTAL NOW</span>
-          <a href="tel:+12345646789" class="footer-phone">+1 234 564 67 89</a>
+          <a href="tel:+2348085290298" class="footer-phone">08085290298</a>
+          <a href="tel:+2347010310703" class="footer-phone" style="font-size: 1.6rem;">07010310703</a>
           <ul class="footer-info-list font-mono">
             <li>
               <span class="muted">SCHEDULE:</span> Monday - Friday: 8am - 6pm
@@ -1865,7 +1746,7 @@
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
-                112 Broadway Ave, New Brunswick, NJ 08901
+                KM16, Opposite OEC, PHC-Aba Road, Eleme Junction, Port Harcourt, Rivers State
               </div>
             </li>
           </ul>
@@ -1902,10 +1783,10 @@
 
     // Lightbox modal images index
     const galleryImages = [
-      'assets/komatsu_excavator.png',
-      'assets/volvo_dump_truck.png',
-      'assets/jcb_backhoe.png',
-      'assets/liebherr_crane.png'
+      'assets/two_loaders.png',
+      'assets/wheel_loader_digging.png',
+      'assets/bucket_teeth.png',
+      'assets/hitachi_excavator.png'
     ];
 
     function openLightbox(index) {
