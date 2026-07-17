@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXCORent | Heavy Excavator & Loader Rentals</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Lease premium construction equipment from top brands — CAT, Komatsu, Volvo, Hitachi, JCB and more. Flexible daily, weekly, and monthly rates for excavators, loaders, graders & more.">
+  <meta name="theme-color" content="#FF6600">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* -------------------------------------------------------------
+       1. VARIABLES & DESIGN SYSTEM
+       ------------------------------------------------------------- */
+    :root {
+      --primary-orange: #FF6600;
+      --primary-orange-hover: #E55B00;
+      --primary-orange-light: rgba(255, 102, 0, 0.1);
+      --dark-charcoal: #1E2225;
+      --dark-slate: #2E3438;
+      --light-bg: #FFFFFF;
+      --light-gray: #F8F9FA;
+      --border-color: #E6E8EA;
+      --text-dark: #1E2225;
+      --text-muted: #5F6970;
+      --text-light: #FFFFFF;
+      
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --max-width: 1200px;
+    }
+
+    /* -------------------------------------------------------------
+       2. BASE RESET & GENERAL STYLES
+       ------------------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--light-gray);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-orange);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-orange-hover);
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* -------------------------------------------------------------
+       3. KEY LAYOUT CONTAINERS
+       ------------------------------------------------------------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .row-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 991px) {
+      .row-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .section-padding {
+        padding: 50px 0;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       4. HEADER & NAV
+       ------------------------------------------------------------- */
+    .header {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      transition: var(--transition-base);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    .logo-exco { color: var(--dark-charcoal); }
+    .logo-rent { color: var(--primary-orange); }
+
+    .header-contacts {
+      display: flex;
+      gap: 30px;
+    }
+
+    .contact-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--light-gray);
+      color: var(--primary-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-sub {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .contact-main {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+
+    .contact-main.orange-link {
+      color: var(--primary-orange);
+    }
+    .contact-main.orange-link:hover {
+      color: var(--primary-orange-hover);
+    }
+
+    @media (max-width: 767px) {
+      .nav-container {
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .header-contacts {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+      }
+      .contact-block {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       5. HERO SECTION
+       ------------------------------------------------------------- */
+    .hero-section {
+      padding: 30px 0 60px 0;
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: 550px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      background-color: var(--dark-charcoal);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+      transform: scale(1.02);
+      transition: var(--transition-base);
+    }
+
+    .hero-banner:hover .hero-img {
+      transform: scale(1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.5) 100%);
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-brand {
+      align-self: flex-start;
+    }
+
+    .brand-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(17,17,17,0.85);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px;
+      padding: 5px 12px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: #fff;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+      transition: var(--transition-base);
+    }
+
+    .brand-pill.highlight {
+      background: #FF6600;
+      border-color: #FF6600;
+    }
+
+    .brand-pill:hover {
+      border-color: rgba(255,102,0,0.6);
+      color: #FF6600;
+    }
+
+    .brand-pill.highlight:hover {
+      background: #E55B00;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-size: 4.8rem;
+      line-height: 0.95;
+      color: var(--text-light);
+      font-weight: 800;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero-card {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+      max-width: 280px;
+      transition: var(--transition-base);
+    }
+
+    .hero-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 102, 0, 0.5);
+    }
+
+    .hero-card-label {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 6px;
+      opacity: 0.95;
+      line-height: 1.2;
+    }
+
+    .hero-card-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 3.5rem;
+      line-height: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .hero-card-symbol {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 767px) {
+      .hero-banner {
+        height: 400px;
+      }
+      .hero-overlay {
+        padding: 30px;
+      }
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      .hero-card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        max-width: 100%;
+        display: inline-block;
+        padding: 20px;
+      }
+      .hero-card-price {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       6. ABOUT SECTION
+       ------------------------------------------------------------- */
+    .about-section {
+      text-align: center;
+      background: var(--light-bg);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .heading-accent {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .heading-accent span {
+      color: var(--primary-orange);
+    }
+
+    .about-para {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* -------------------------------------------------------------
+       7. CONTENT ROW PRESENTS
+       ------------------------------------------------------------- */
+    .content-row-section {
+      background-color: var(--light-bg);
+    }
+
+    .side-image-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+      height: 400px;
+      width: 100%;
+    }
+
+    .side-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-base);
+    }
+
+    .side-image-wrapper:hover .side-img {
+      transform: scale(1.04);
+    }
+
+    .row-title {
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .row-title span {
+      color: var(--primary-orange);
+      display: block;
+    }
+
+    .row-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .bullet-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: var(--light-gray);
+      padding: 24px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-orange);
+    }
+
+    .bullet-icon {
+      font-size: 2rem;
+      color: var(--primary-orange);
+      line-height: 1;
+    }
+
+    .bullet-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      letter-spacing: 0;
+    }
+
+    .bullet-link {
+      font-family: var(--font-display);
+      color: var(--primary-orange);
+      text-transform: uppercase;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      transition: var(--transition-base);
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .bullet-link:hover {
+      color: var(--primary-orange-hover);
+      letter-spacing: 0.08em;
+    }
+
+    .back-to-top-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .caret-btn {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+      transition: var(--transition-base);
+    }
+
+    .caret-btn:hover {
+      background: var(--primary-orange-hover);
+      transform: translateY(-3px);
+    }
+
+    /* -------------------------------------------------------------
+       8. DARK FEATURE GRID SECTION
+       ------------------------------------------------------------- */
+    .dark-features-section {
+      background: linear-gradient(rgba(30, 34, 37, 0.95), rgba(30, 34, 37, 0.95)), url('assets/two_loaders.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text-light);
+      position: relative;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .feature-col h3 {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+      padding-bottom: 12px;
+      color: var(--text-light);
+    }
+
+    .features-list {
+      list-style: none;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .features-list li::before {
+      content: '\25B6'; /* Triangular arrow */
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 0.75rem;
+      color: var(--primary-orange);
+    }
+
+    .section-caret-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: var(--transition-base);
+    }
+
+    .section-caret-btn:hover {
+      background: var(--primary-orange-hover);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 991px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .section-caret-btn {
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       9. ORANGE CONTACT STRIP
+       ------------------------------------------------------------- */
+    .orange-strip {
+      background: var(--primary-orange);
+      color: var(--text-light);
+      min-height: 369px;
+      display: flex;
+      align-items: center;
+    }
+
+    .orange-strip .container {
+      width: 100%;
+    }
+
+    .strip-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .strip-left {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .strip-left span {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      opacity: 0.9;
+    }
+
+    .strip-left a {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: var(--text-light);
+      text-decoration: none;
+      line-height: 1.1;
+      transition: var(--transition-base);
+    }
+
+    .strip-left a:hover {
+      opacity: 0.95;
+    }
+
+    .strip-right {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      text-align: right;
+      letter-spacing: 0.02em;
+      align-self: center;
+    }
+
+    @media (max-width: 767px) {
+      .strip-flex {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+      .strip-left a {
+        font-size: 2rem;
+      }
+      .strip-right {
+        text-align: center;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       10. PRICING SECTION
+       ------------------------------------------------------------- */
+    .pricing-section {
+      background: var(--light-gray);
+      text-align: center;
+    }
+
+    .pricing-intro {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-top: -12px;
+      margin-bottom: 50px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .price-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 40px 24px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+      border-color: rgba(255, 102, 0, 0.2);
+    }
+
+    .price-rate-label {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    .price-val {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: var(--primary-orange);
+      line-height: 1;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .price-symbol {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 4px;
+      margin-right: 2px;
+    }
+
+    .price-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 991px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       11. PHOTO GALLERY
+       ------------------------------------------------------------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-base);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-base);
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-btn {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+
+    @media (max-width: 991px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 29, 32, 0.95);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .lightbox-content {
+      max-width: 80%;
+      max-height: 80%;
+      position: relative;
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* -------------------------------------------------------------
+       11b. BRANDS WE CARRY SECTION
+       ------------------------------------------------------------- */
+    .brands-section {
+      background: var(--light-gray);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 28px 0;
+      overflow: hidden;
+    }
+
+    .brands-label {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .brands-ticker {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .brands-track {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      white-space: nowrap;
+      animation: ticker-scroll 22s linear infinite;
+      width: max-content;
+    }
+
+    .brands-ticker:hover .brands-track {
+      animation-play-state: paused;
+    }
+
+    .b-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .b-brand:hover {
+      color: var(--primary-orange);
+    }
+
+    .highlight-brand {
+      color: var(--primary-orange);
+    }
+
+    .b-sep {
+      color: var(--border-color);
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* -------------------------------------------------------------
+       12. FAQs SECTION
+       ------------------------------------------------------------- */
+    .faq-section {
+      background: var(--light-bg);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 767px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--light-gray);
+      overflow: hidden;
+      transition: var(--transition-base);
+    }
+
+    .faq-item.active {
+      border-color: rgba(255, 102, 0, 0.3);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      cursor: pointer;
+      user-select: none;
+      justify-content: space-between;
+    }
+
+    .faq-question-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-q-box {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .faq-q-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      text-transform: uppercase;
+    }
+
+    .faq-chevron {
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .faq-answer-content {
+      padding: 0 24px 24px 72px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* -------------------------------------------------------------
+       13. FOOTER
+       ------------------------------------------------------------- */
+    .footer {
+      background: var(--dark-charcoal);
+      color: var(--text-light);
+      padding: 80px 0 40px 0;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 24px;
+    }
+
+    .footer-brand .logo-exco {
+      color: var(--text-light);
+    }
+
+    .footer-brand-text {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 30px;
+    }
+
+    .copyright {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-action-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 12px;
+    }
+
+    .footer-phone {
+      font-family: var(--font-display);
+      font-weight: 850;
+      font-size: 3rem;
+      color: var(--primary-orange);
+      text-decoration: none;
+      line-height: 1;
+      display: block;
+      margin-bottom: 24px;
+      transition: var(--transition-base);
+    }
+
+    .footer-phone:hover {
+      color: var(--primary-orange-hover);
+    }
+
+    .footer-info-list {
+      list-style: none;
+    }
+
+    .footer-info-list li {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-info-list li span.muted {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-caret-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: var(--primary-orange);
+      color: var(--text-light);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: var(--transition-base);
+    }
+
+    .footer-caret-btn:hover {
+      background: var(--primary-orange-hover);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 991px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .footer-caret-btn {
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+
+    /* Scroll reveal transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* FAQ Hover micro-interaction */
+    .faq-question:hover .faq-q-text {
+      color: var(--primary-orange);
+    }
+
+    /* Pricing card top border style */
+    .price-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-orange);
+      transform: scaleX(0);
+      transition: var(--transition-base);
+      transform-origin: left;
+    }
+    .price-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* -------------------------------------------------------------
+       14. EQUIPMENT WE LEASE SECTION
+       ------------------------------------------------------------- */
+    .equip-section {
+      background: var(--light-gray);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 991px) {
+      .equip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .equip-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .equip-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      transition: var(--transition-base);
+    }
+
+    .equip-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.10);
+      border-color: rgba(255,102,0,0.25);
+    }
+
+    .equip-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .equip-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .equip-card:hover .equip-img {
+      transform: scale(1.06);
+    }
+
+    .equip-brand-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .equip-info {
+      padding: 20px 22px 24px;
+    }
+
+    .equip-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .equip-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Gallery section ensure padding */
+    .gallery-section {
+      background: var(--light-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#" class="logo-container">
+          <div class="logo"><span class="logo-exco">GULF</span><span class="logo-rent">TECHBAY</span></div>
+        </a>
+        <div class="header-contacts">
+          <div class="contact-block">
+            <div class="contact-icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-sub font-mono">CALL US TODAY</span>
+              <a href="tel:+12345646789" class="contact-main orange-link">+1 234 564 67 89</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-sub font-mono">OUR OFFICE LOCATION</span>
+              <span class="contact-main">112 Broadway Ave, New Brunswick, NJ 08901</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-banner">
+        <img src="assets/hero_excavator.png" alt="Heavy construction equipment — excavators, loaders, graders from CAT, Komatsu, Volvo, Hitachi, JCB" class="hero-img">
+        <div class="hero-overlay">
+          <div class="hero-brand">
+            <div class="brand-strip">
+              <span class="brand-pill highlight">CAT</span>
+              <span class="brand-pill">KOMATSU</span>
+              <span class="brand-pill">VOLVO CE</span>
+              <span class="brand-pill">HITACHI</span>
+              <span class="brand-pill">JCB</span>
+              <span class="brand-pill">LIEBHERR</span>
+            </div>
+            <h1 class="hero-title">HEAVY EQUIPMENT<br>LEASING</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS WE CARRY TICKER -->
+  <section class="brands-section">
+    <div class="brands-label">PREMIUM BRANDS IN OUR LEASING FLEET</div>
+    <div class="brands-ticker">
+      <div class="brands-track">
+        <span class="b-brand highlight-brand">Caterpillar</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Komatsu</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Volvo CE</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Hitachi</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">JCB</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Liebherr</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Doosan</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Sany</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Kobelco</span>
+        <span class="b-sep">&bull;</span>
+        
+        <!-- Duplicate for infinite loop scroll -->
+        <span class="b-brand highlight-brand">Caterpillar</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Komatsu</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Volvo CE</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Hitachi</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">JCB</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Liebherr</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Doosan</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Sany</span>
+        <span class="b-sep">&bull;</span>
+        <span class="b-brand">Kobelco</span>
+        <span class="b-sep">&bull;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section section-padding reveal">
+    <div class="container">
+      <h2 class="heading-accent">ABOUT <span>GULF TECHBAY</span></h2>
+      <p class="about-para">
+        Lease your Construction Equipment with confidence — we will provide what you need, when you need it, all the time. Our 24/7 hotline provides you with wide-ranging solutions for all Construction Equipment situations you might encounter.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- EQUIPMENT WE LEASE -->
+  <section class="equip-section section-padding reveal">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 48px;">
+        <h2 class="heading-accent" style="justify-content:center;">EQUIPMENT <span>WE LEASE</span></h2>
+        <p style="color: var(--text-muted); font-size: 1rem; max-width: 580px; margin: 0 auto;">From excavators to cranes — we source world-class machines from the industry's top manufacturers so you always get the right tool for the job.</p>
+      </div>
+      <div class="equip-grid">
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/hero_excavator.png" alt="CAT Excavator" class="equip-img">
+            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Crawler Excavator</h3>
+            <p class="equip-desc">Heavy-duty digging for foundations, trenching, and bulk earthmoving on demanding jobsites.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/komatsu_excavator.png" alt="Komatsu Excavator" class="equip-img">
+            <span class="equip-brand-badge" style="background:#005BAC;">Komatsu</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Hydraulic Excavator</h3>
+            <p class="equip-desc">Precision digging with advanced hydraulics — ideal for infrastructure and deep excavation work.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/two_loaders.png" alt="Wheel Loader" class="equip-img">
+            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Wheel Loader</h3>
+            <p class="equip-desc">High-capacity loading for quarries, aggregate handling, and material transfer applications.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/volvo_dump_truck.png" alt="Volvo Dump Truck" class="equip-img">
+            <span class="equip-brand-badge" style="background:#003B7C;">Volvo CE</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Articulated Dump Truck</h3>
+            <p class="equip-desc">Off-road hauling of heavy payloads across rough terrain — built for mining and large-scale earthwork.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/jcb_backhoe.png" alt="JCB Backhoe Loader" class="equip-img">
+            <span class="equip-brand-badge" style="background:#F5A800; color:#111;">JCB</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Backhoe Loader</h3>
+            <p class="equip-desc">Versatile two-in-one machine for digging, trenching, and loading — perfect for utility and civil works.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/hitachi_excavator.png" alt="Hitachi Excavator" class="equip-img">
+            <span class="equip-brand-badge" style="background:#CC0000;">Hitachi</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Mining Excavator</h3>
+            <p class="equip-desc">Built for extreme conditions — heavy rock breaking, quarry stripping, and large-scale extraction projects.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/motor_grader.png" alt="Motor Grader" class="equip-img">
+            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Motor Grader</h3>
+            <p class="equip-desc">Precision road grading and levelling for highway construction, airfields, and site preparation.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/liebherr_crane.png" alt="Liebherr Mobile Crane" class="equip-img">
+            <span class="equip-brand-badge" style="background:#F7CE00; color:#111;">Liebherr</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Mobile Crane</h3>
+            <p class="equip-desc">Telescopic all-terrain cranes for high-capacity lifting on construction, oil &amp; gas, and industrial sites.</p>
+          </div>
+        </div>
+
+        <div class="equip-card">
+          <div class="equip-img-wrap">
+            <img src="assets/wheel_loader_digging.png" alt="Wheel Loader Digging" class="equip-img">
+            <span class="equip-brand-badge" style="background:#FF6600;">CAT</span>
+          </div>
+          <div class="equip-info">
+            <h3 class="equip-name">Compact Loader</h3>
+            <p class="equip-desc">Agile and powerful for tight urban sites, landscaping, and small-scale earthmoving operations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT ROW 1: WHY LEASING -->
+  <section class="content-row-section section-padding reveal">
+    <div class="container">
+      <div class="row-grid">
+        <div class="side-image-wrapper">
+          <img src="assets/two_loaders.png" alt="Gulf Techbay heavy equipment fleet" class="side-img">
+        </div>
+        <div>
+          <h2 class="row-title">WHY<br><span>LEASING?</span></h2>
+          <p class="row-desc">
+            Leasing construction equipment offers several key advantages: it maximizes cash flow as companies only pay for equipment when they need it, freeing up funds that could otherwise be tied in purchasing assets. This allows you to allocate capital to other areas such as operations or expansion.
+          </p>
+          <p class="row-desc" style="margin-top: -10px;">
+            Leasing also reduces your balance sheet liabilities. It eliminates the challenges of equipment depreciation and maintenance — since these are handled by us. Overall, leasing provides financial flexibility and can be more economically beneficial than outright purchases, especially in an industry characterized by fluctuating demand and project-based needs.
+          </p>
+          <div class="bullet-block">
+            <div class="bullet-icon" style="flex-shrink: 0; display: flex; align-items: center;">
+              <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="24" width="28" height="18" rx="2" fill="none" stroke="#FF6600" stroke-width="4"/>
+                <path d="M22 24V14H34V24" stroke="#FF6600" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="20" cy="46" r="6" fill="#1E2225" stroke="#FF6600" stroke-width="4"/>
+                <circle cx="32" cy="46" r="6" fill="#1E2225" stroke="#FF6600" stroke-width="4"/>
+                <path d="M40 32L48 38H56L58 28L52 24" stroke="#FF6600" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="bullet-title">SPEND MONEY ON EQUIPMENT ONLY WHEN YOU USE IT</h4>
+              <a href="#contact" class="bullet-link">GET A QUOTE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT ROW 2: WHY LEASING FROM US -->
+  <section class="content-row-section section-padding reveal" style="padding-top: 0;">
+    <div class="container">
+      <div class="row-grid">
+        <div>
+          <h2 class="row-title">WHY LEASING<br><span>FROM US?</span></h2>
+          <p class="row-desc">
+            We back up our commitment with a 4-point guarantee. We offer flexible terms for your equipment leasing needs — we can even assist in designing the payment structure to reconcile with your budget and cash flow, with flexible renewal options available.
+          </p>
+          <div class="back-to-top-container">
+            <a href="#" class="caret-btn" aria-label="Back to top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="side-image-wrapper">
+          <img src="assets/wheel_loader_digging.png" alt="Gulf Techbay wheel loader in action" class="side-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK FEATURE GRID: 4-POINT GUARANTEE -->
+  <section class="dark-features-section section-padding reveal">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 48px;">
+        <h2 style="font-family: var(--font-display); font-size: 2rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">OUR <span style="color: var(--primary-orange);">4-POINT GUARANTEE</span></h2>
+        <p style="color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 600px; margin: 0 auto;">We back up our commitment with four solid promises designed to keep your project running without interruption.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-col">
+          <h3>&#9312; Client Satisfaction</h3>
+          <ul class="features-list">
+            <li>We only supply world-class equipment, fully serviced and ready for work on delivery.</li>
+            <li>Every unit undergoes rigorous inspection before it reaches your jobsite.</li>
+          </ul>
+        </div>
+        <div class="feature-col">
+          <h3>&#9313; Dependable Delivery</h3>
+          <ul class="features-list">
+            <li>Construction equipment will arrive at your jobsite in prime condition within 30 minutes of the agreed delivery time.</li>
+            <li>Our logistics team tracks every dispatch in real time.</li>
+          </ul>
+        </div>
+        <div class="feature-col">
+          <h3>&#9314; On-Site Service</h3>
+          <ul class="features-list">
+            <li>Our repair crew or replacement equipment will arrive at your site within six hours of your call.</li>
+            <li>Minimizing downtime is our top operational priority.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; text-align: center;">
+        <h3 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--primary-orange); margin-bottom: 12px;">&#9315; 24/7 Customer Service Hotline</h3>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 640px; margin: 0 auto;">We have knowledgeable staff on call 24/7 to solve all your equipment queries and concerns within the day. Give us a call, email us at <a href="mailto:gtechbay@gmail.com" style="color: var(--primary-orange); text-decoration: none;">gtechbay@gmail.com</a>, or visit our office to view our top-of-the-line construction equipment.</p>
+      </div>
+    </div>
+    <a href="#" class="section-caret-btn" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ORANGE CONTACT STRIP -->
+  <section class="orange-strip">
+    <div class="container">
+      <div class="strip-flex">
+        <div class="strip-left">
+          <span>CONTACT US</span>
+          <a href="tel:+12345646789">+1 234 564 67 89</a>
+        </div>
+        <div class="strip-right">
+          Monday - Friday: 8am - 6pm<br>
+          Saturday: 9am - 4pm<br>
+          Sunday: closed
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- GALLERY -->
+  <section class="gallery-section section-padding reveal">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="assets/komatsu_excavator.png" alt="Komatsu Hydraulic Excavator at work" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="assets/volvo_dump_truck.png" alt="Volvo CE Articulated Dump Truck hauling rock" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="assets/jcb_backhoe.png" alt="JCB Backhoe Loader front bucket" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="assets/liebherr_crane.png" alt="Liebherr Mobile Crane setting structural steel" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightboxImg" src="" alt="Zoomed view">
+    </div>
+  </div>
+
+  <!-- FAQs SECTION -->
+  <section class="faq-section section-padding reveal">
+    <div class="container">
+      <h2 class="heading-accent">FREQUENTLY <span>ASKED QUESTIONS</span></h2>
+      
+      <div class="faq-grid">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">What updates can I expect with ExcoRent?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              ExcoRent continuously updates its machinery fleet to feature the latest energy-efficient, robust models from CAT, Komatsu, Volvo, Hitachi, JCB, Liebherr, and other premier manufacturers. You receive top performance, fully inspected safety configurations on every dispatch.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">How to choose the right machine for work?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Our specialists cross-examine your ground conditions, excavation depth, job duration, and lift capacities to recommend the exact crawler or excavator setup that minimizes project overheads and boosts efficiency.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">Could you assist with clear plans for operators?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes. We provide complete layout parameters, tech guidelines, and can coordinate directly with certified operator firms to provide skilled hands if your workforce doesn't currently hold specific licensing codes.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">How do we get updates about rental status?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Upon reservation, you will receive text alerts and telemetry links to monitor mobilization schedules, on-site machine arrivals, and billing cycles instantly via web panels.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">What can I do if damage happens on my work?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Every rental model comes with robust standard damage guidelines and waivers. Simply notify our 24/7 hotline immediately. Standard mechanical failures are repaired or replaced within six hours.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faq-question-left">
+              <div class="faq-q-box">?</div>
+              <span class="faq-q-text">Can I rent an excavator for more than one month?</span>
+            </div>
+            <div class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Certainly. Long-term commercial leasing packages feature lower monthly bases, flexible payment renewals, and dedicated monthly field technician support visits included in the plan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-exco" style="color:#fff;">GULF</span><span class="logo-rent">TECHBAY</span></div>
+          <p class="footer-brand-text">
+            Lease your Construction Equipment with confidence. We provide what you need, when you need it, all the time. Our 24/7 hotline provides wide-ranging solutions for all Construction Equipment situations you might encounter.
+          </p>
+          <p class="footer-brand-text" style="margin-bottom: 8px;">
+            <strong style="color:rgba(255,255,255,0.6); font-size:0.8rem; letter-spacing:0.05em;">EMAIL US</strong><br>
+            <a href="mailto:gtechbay@gmail.com" style="color: var(--primary-orange); text-decoration: none; font-size: 1rem;">gtechbay@gmail.com</a>
+          </p>
+          <div class="copyright">
+            &copy; 2026 Gulf Techbay. All rights reserved.
+          </div>
+        </div>
+        <div>
+          <span class="footer-action-title">RENTAL NOW</span>
+          <a href="tel:+12345646789" class="footer-phone">+1 234 564 67 89</a>
+          <ul class="footer-info-list font-mono">
+            <li>
+              <span class="muted">SCHEDULE:</span> Monday - Friday: 8am - 6pm
+            </li>
+            <li>
+              <span class="muted">SATURDAY:</span> 9am - 4pm
+            </li>
+            <li>
+              <span class="muted">SUNDAY:</span> closed
+            </li>
+            <li style="margin-top: 20px; font-family: var(--font-display); font-weight: 500;">
+              <div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px; color: var(--primary-orange)">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                112 Broadway Ave, New Brunswick, NJ 08901
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="footer-caret-btn" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </a>
+  </footer>
+
+  <!-- JAVASCRIPT FOR ACCORDION, LIGHTBOX & ANIMATIONS -->
+  <script>
+    // FAQ Accordion logic
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const answer = faqItem.querySelector('.faq-answer');
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQs first
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      
+      // Open current one if it was not active
+      if (!isActive) {
+        faqItem.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    }
+
+    // Lightbox modal images index
+    const galleryImages = [
+      'assets/komatsu_excavator.png',
+      'assets/volvo_dump_truck.png',
+      'assets/jcb_backhoe.png',
+      'assets/liebherr_crane.png'
+    ];
+
+    function openLightbox(index) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      img.src = galleryImages[index];
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    // Close lightbox on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    // Scroll reveal logic using IntersectionObserver
+    const observerOptions = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Unobserve once revealed to optimize performance
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(section => {
+      revealObserver.observe(section);
+    });
+  </script>
+</body>
+</html>
