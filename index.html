@@ -464,7 +464,13 @@
         height: 240px;
       }
       .row-title {
-        font-size: 1.8rem;
+        font-size: 2rem !important;
+      }
+      .heading-accent {
+        font-size: 2rem !important;
+      }
+      .guarantee-title {
+        font-size: 2rem !important;
       }
       .bullet-block {
         padding: 16px;
@@ -487,7 +493,8 @@
 
     .heading-accent {
       font-family: var(--font-display);
-      font-size: 2rem;
+      font-weight: 700;
+      font-size: 70px;
       color: var(--text-dark);
       margin-bottom: 24px;
       display: flex;
@@ -534,7 +541,7 @@
     }
 
     .row-title {
-      font-size: 2.4rem;
+      font-size: 70px;
       line-height: 1.1;
       margin-bottom: 20px;
       color: var(--text-dark);
@@ -629,6 +636,15 @@
       background-attachment: fixed;
       color: var(--text-light);
       position: relative;
+    }
+
+    .guarantee-title {
+      font-family: var(--font-display);
+      font-size: 70px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .features-grid {
@@ -1074,7 +1090,7 @@
     @media (max-width: 767px) {
       .faq-section .heading-accent {
         flex-wrap: wrap;
-        font-size: 1.5rem;
+        font-size: 2rem !important;
         justify-content: flex-start;
         gap: 6px;
       }
@@ -1215,8 +1231,14 @@
     .copyright {
       font-family: var(--font-display);
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.7);
       letter-spacing: 0.05em;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 30px;
+      text-align: left;
     }
 
     .footer-action-title {
@@ -1292,6 +1314,19 @@
       .footer-caret-btn {
         right: 20px;
         bottom: 20px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 60px 0 80px 0;
+      }
+      .footer-bottom-bar {
+        padding-top: 20px;
+        padding-bottom: 70px;
+      }
+      .footer-phone {
+        font-size: 2rem;
       }
     }
 
@@ -1492,7 +1527,7 @@
   <!-- ABOUT SECTION -->
   <section class="about-section section-padding reveal">
     <div class="container">
-      <h2 class="heading-accent">ABOUT <span>GULF TECHBAY</span></h2>
+      <h2 class="heading-accent">ABOUT</h2>
       <p class="about-para">
         Lease your Construction Equipment with confidence — we will provide what you need, when you need it, all the time. Our 24/7 hotline provides you with wide-ranging solutions for all Construction Equipment situations you might encounter.
       </p>
@@ -1565,7 +1600,7 @@
   <section class="dark-features-section section-padding reveal">
     <div class="container">
       <div style="text-align:center; margin-bottom: 48px;">
-        <h2 style="font-family: var(--font-display); font-size: 2rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">OUR <span style="color: var(--primary-orange);">4-POINT GUARANTEE</span></h2>
+        <h2 class="guarantee-title">OUR <span style="color: var(--primary-orange);">4-POINT GUARANTEE</span></h2>
         <p style="color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 600px; margin: 0 auto;">We back up our commitment with four solid promises designed to keep your project running without interruption.</p>
       </div>
       <div class="features-grid">
@@ -1678,8 +1713,7 @@
   <!-- FAQs SECTION -->
   <section class="faq-section section-padding reveal">
     <div class="container">
-      <h2 class="heading-accent">FREQUENTLY <span>ASKED QUESTIONS</span></h2>
-      
+      <h2 class="heading-accent" style="font-size: 70px; margin-bottom: 24px; justify-content: center;">FAQs</h2>
       <div class="faq-grid">
         <!-- Q1 -->
         <div class="faq-item">
@@ -1816,9 +1850,7 @@
             <strong style="color:rgba(255,255,255,0.6); font-size:0.8rem; letter-spacing:0.05em;">EMAIL US</strong><br>
             <a href="mailto:gtechbay@gmail.com" style="color: var(--primary-orange); text-decoration: none; font-size: 1rem;">gtechbay@gmail.com</a>
           </p>
-          <div class="copyright">
-            &copy; 2026 Gulf Techbay. All rights reserved.
-          </div>
+
         </div>
         <div>
           <span class="footer-action-title">RENTAL NOW</span>
@@ -1843,6 +1875,11 @@
             </li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div class="copyright">&copy; 2026 Gulf Techbay. All rights reserved.</div>
       </div>
     </div>
     <a href="#" class="footer-caret-btn" aria-label="Back to top">
