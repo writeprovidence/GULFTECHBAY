@@ -104,7 +104,6 @@
     /* Typography Utilities */
     h1, h2, h3, h4 {
       font-family: var(--font-display);
-      text-transform: uppercase;
       font-weight: 700;
       letter-spacing: -0.02em;
     }
@@ -642,7 +641,6 @@
       font-family: var(--font-display);
       font-size: 70px;
       color: #fff;
-      text-transform: uppercase;
       margin-bottom: 12px;
       font-weight: 700;
     }
@@ -894,6 +892,12 @@
       position: relative;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    @media (min-width: 576px) {
+      .gallery-item:last-child:nth-child(odd) {
+        grid-column: span 2;
+      }
     }
 
     .gallery-img {
@@ -1473,7 +1477,7 @@
     <div class="container">
       <div class="nav-container">
         <a href="#" class="logo-container">
-          <img src="logo/gulftechbar_black.png" alt="Gulf Techbay Logo" class="logo-img-brand">
+          <img src="logo/logo1.png" alt="Gulf Techbay Logo" class="logo-img-brand">
         </a>
         <div class="header-contacts">
           <div class="contact-block">
@@ -1527,7 +1531,7 @@
   <!-- ABOUT SECTION -->
   <section class="about-section section-padding reveal">
     <div class="container">
-      <h2 class="heading-accent">ABOUT</h2>
+      <h2 class="heading-accent">About</h2>
       <p class="about-para">
         Lease your Construction Equipment with confidence — we will provide what you need, when you need it, all the time. Our 24/7 hotline provides you with wide-ranging solutions for all Construction Equipment situations you might encounter.
       </p>
@@ -1542,10 +1546,10 @@
     <div class="container">
       <div class="row-grid">
         <div class="side-image-wrapper">
-          <img src="assets/two_loaders.png" alt="Gulf Techbay heavy equipment fleet" class="side-img">
+          <img src="images/image7.jpeg" alt="Gulf Techbay heavy equipment fleet" class="side-img">
         </div>
         <div>
-          <h2 class="row-title">WHY<br><span>LEASING?</span></h2>
+          <h2 class="row-title">Why<br><span>Leasing?</span></h2>
           <p class="row-desc">
             Leasing construction equipment offers several key advantages: it maximizes cash flow as companies only pay for equipment when they need it, freeing up funds that could otherwise be tied in purchasing assets. This allows you to allocate capital to other areas such as operations or expansion.
           </p>
@@ -1564,7 +1568,6 @@
             </div>
             <div>
               <h4 class="bullet-title" style="white-space: nowrap;">SPEND MONEY ON EQUIPMENT ONLY WHEN YOU USE IT</h4>
-              <a href="#contact" class="bullet-link">GET A QUOTE</a>
             </div>
           </div>
         </div>
@@ -1573,24 +1576,18 @@
   </section>
 
   <!-- CONTENT ROW 2: WHY LEASING FROM US -->
-  <section class="content-row-section section-padding reveal" style="padding-top: 0;">
+  <section class="content-row-section section-padding reveal" style="padding-top: 80px;">
     <div class="container">
       <div class="row-grid">
         <div>
-          <h2 class="row-title">WHY LEASING<br><span>FROM US?</span></h2>
+          <h2 class="row-title">Why Leasing<br><span>From Us?</span></h2>
           <p class="row-desc">
             We back up our commitment with a 4-point guarantee. We offer flexible terms for your equipment leasing needs — we can even assist in designing the payment structure to reconcile with your budget and cash flow, with flexible renewal options available.
           </p>
-          <div class="back-to-top-container">
-            <a href="#" class="caret-btn" aria-label="Back to top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="18 15 12 9 6 15"/>
-              </svg>
-            </a>
-          </div>
+
         </div>
         <div class="side-image-wrapper">
-          <img src="assets/wheel_loader_digging.png" alt="Gulf Techbay wheel loader in action" class="side-img">
+          <img src="images/image8.jpeg" alt="Gulf Techbay wheel loader in action" class="side-img">
         </div>
       </div>
     </div>
@@ -1600,7 +1597,7 @@
   <section class="dark-features-section section-padding reveal">
     <div class="container">
       <div style="text-align:center; margin-bottom: 48px;">
-        <h2 class="guarantee-title">OUR <span style="color: var(--primary-orange);">4-POINT GUARANTEE</span></h2>
+        <h2 class="guarantee-title">Our <span style="color: var(--primary-orange);">4-Point Guarantee</span></h2>
         <p style="color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 600px; margin: 0 auto;">We back up our commitment with four solid promises designed to keep your project running without interruption.</p>
       </div>
       <div class="features-grid">
@@ -1631,11 +1628,7 @@
         <p style="color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 640px; margin: 0 auto;">We have knowledgeable staff on call 24/7 to solve all your equipment queries and concerns within the day. Give us a call, email us at <a href="mailto:gtechbay@gmail.com" style="color: var(--primary-orange); text-decoration: none;">gtechbay@gmail.com</a>, or visit our office to view our top-of-the-line construction equipment.</p>
       </div>
     </div>
-    <a href="#" class="section-caret-btn" aria-label="Back to top">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"/>
-      </svg>
-    </a>
+
   </section>
 
 
@@ -1645,10 +1638,14 @@
   <!-- GALLERY -->
   <section class="gallery-section section-padding reveal">
     <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 class="heading-accent" style="justify-content: center; font-weight: 900;">Our Fleet <span>In Action</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.7;">A glimpse of the world-class heavy equipment we have available for lease — fully serviced and ready for your next project.</p>
+      </div>
       <div class="gallery-grid">
-        <!-- Top-left: Wheel loader on flatbed -->
+        <!-- Item 1: image1.jpeg -->
         <div class="gallery-item" onclick="openLightbox(0)">
-          <img src="assets/two_loaders.png" alt="CAT Wheel Loader on transport flatbed" class="gallery-img">
+          <img src="images/image1.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1659,9 +1656,9 @@
             </svg>
           </div>
         </div>
-        <!-- Top-right: Wheel loader digging rock -->
+        <!-- Item 2: image2.jpeg -->
         <div class="gallery-item" onclick="openLightbox(1)">
-          <img src="assets/wheel_loader_digging.png" alt="CAT Wheel Loader pushing rock on site" class="gallery-img">
+          <img src="images/image2.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1672,9 +1669,9 @@
             </svg>
           </div>
         </div>
-        <!-- Bottom-left: Bucket teeth close-up -->
+        <!-- Item 3: image3.jpeg -->
         <div class="gallery-item" onclick="openLightbox(2)">
-          <img src="assets/bucket_teeth.png" alt="Heavy equipment bucket teeth close-up" class="gallery-img">
+          <img src="images/image3.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1685,9 +1682,61 @@
             </svg>
           </div>
         </div>
-        <!-- Bottom-right: Dump truck + loader fleet -->
+        <!-- Item 4: image4.jpeg -->
         <div class="gallery-item" onclick="openLightbox(3)">
-          <img src="assets/hitachi_excavator.png" alt="Heavy equipment fleet - dump truck and wheel loaders" class="gallery-img">
+          <img src="images/image4.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Item 5: image5.jpeg -->
+        <div class="gallery-item" onclick="openLightbox(4)">
+          <img src="images/image5.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Item 6: image9.jpeg -->
+        <div class="gallery-item" onclick="openLightbox(5)">
+          <img src="images/image9.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Item 7: image10.jpeg -->
+        <div class="gallery-item" onclick="openLightbox(6)">
+          <img src="images/image10.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
+          <div class="gallery-overlay"></div>
+          <div class="gallery-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Item 8: image7.jpeg -->
+        <div class="gallery-item" onclick="openLightbox(7)">
+          <img src="images/image7.jpeg" alt="Gulf Techbay heavy equipment" class="gallery-img">
           <div class="gallery-overlay"></div>
           <div class="gallery-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1844,7 +1893,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="logo-container" style="margin-bottom: 24px;">
-            <img src="logo/gulftechbay_white.png" alt="Gulf Techbay Logo" class="logo-img-brand">
+            <img src="logo/logo1.png" alt="Gulf Techbay Logo" class="logo-img-brand">
           </a>
           <p class="footer-brand-text" style="margin-bottom: 8px;">
             <strong style="color:rgba(255,255,255,0.6); font-size:0.8rem; letter-spacing:0.05em;">EMAIL US</strong><br>
@@ -1912,10 +1961,14 @@
 
     // Lightbox modal images index
     const galleryImages = [
-      'assets/two_loaders.png',
-      'assets/wheel_loader_digging.png',
-      'assets/bucket_teeth.png',
-      'assets/hitachi_excavator.png'
+      'images/image1.jpeg',
+      'images/image2.jpeg',
+      'images/image3.jpeg',
+      'images/image4.jpeg',
+      'images/image5.jpeg',
+      'images/image9.jpeg',
+      'images/image10.jpeg',
+      'images/image7.jpeg'
     ];
 
     function openLightbox(index) {
